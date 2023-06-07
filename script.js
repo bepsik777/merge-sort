@@ -23,7 +23,6 @@ function merge (arrayOne, arrayTwo) {
     for (; j <= n; j++) {
       newArr[k++] = arrayTwo[j]
     }
-    console.log('new array', newArr)
     return newArr
   }
   
@@ -36,15 +35,12 @@ function mergeSort(arr) {
     if (low < high) { 
     let leftHalf = arr.splice(0, middle)
     let rightHalf = arr.splice(-middle)
-    console.log(leftHalf, rightHalf)
     return merge(mergeSort(leftHalf), mergeSort(rightHalf))
     }
   } 
   
   let arr = [1, 4, 3, 4, 20, 6, 2, 8, 18, 10, 11]
   
-  // mergeSort(arr)
-  console.log(mergeSort(arr))
   
   
   
